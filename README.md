@@ -6,7 +6,7 @@
 
 ## 📌 Deskripsi Aplikasi
 
-Flavoria adalah aplikasi mobile berbasis **React Native (Expo)** yang digunakan untuk menampilkan dan mengelola informasi resep makanan dari berbagai negara. Data resep diperoleh melalui **API eksternal** dan disajikan dalam bentuk antarmuka yang interaktif dan mudah digunakan. Aplikasi ini dikembangkan sekaligus sebagai studi kasus **optimasi dan Debugging** pada aplikasi mobile React Native, dengan fokus pada stabilitas aplikasi, penanganan error saat runtime, serta pencegahan terjadinya crash pada perangkat Android.
+Flavoria adalah aplikasi mobile berbasis **React Native (Expo)** yang digunakan untuk menampilkan dan mengelola informasi resep makanan dari berbagai negara. Data resep diperoleh melalui **API eksternal** dan disajikan dalam bentuk antarmuka yang interaktif dan mudah digunakan. Aplikasi ini dikembangkan sekaligus sebagai studi kasus **optimasi dan debugging** pada aplikasi mobile React Native, dengan fokus pada stabilitas aplikasi, penanganan error saat runtime, serta pencegahan terjadinya crash pada perangkat Android.
 
 ---
 
@@ -41,17 +41,13 @@ Untuk meningkatkan performa dan pengalaman pengguna, berikut beberapa teknik opt
 
 Proses pengembangan aplikasi ini melibatkan beberapa metode testing dan debugging, antara lain:
 
-* **Console.log**
-  Digunakan untuk melacak aliran data dari API dan memastikan state aplikasi tersimpan dengan benar.
+* **Console.log**: Digunakan untuk melacak aliran data dari API dan memastikan state aplikasi tersimpan dengan benar.
 
-* **Metro Bundler**
-  Digunakan untuk memantau log error dan peringatan secara real-time selama proses pengembangan pada emulator maupun perangkat fisik.
+* **Metro Bundler**: Digunakan untuk memantau log error dan peringatan secara real-time selama proses pengembangan pada emulator maupun perangkat fisik.
 
-* **Expo DevTools**
-  Digunakan untuk memonitor performa aplikasi serta mengecek network request.
+* **Expo DevTools**: Digunakan untuk memonitor performa aplikasi serta mengecek network request.
 
-* **Error Handling dengan Alert**
-  Menampilkan notifikasi yang user-friendly menggunakan komponen `Alert` ketika terjadi kegagalan koneksi atau data tidak ditemukan.
+* **Error Handling dengan Alert**: Menampilkan notifikasi yang user-friendly menggunakan komponen `Alert` ketika terjadi kegagalan koneksi atau data tidak ditemukan.
 
 ---
 
