@@ -87,6 +87,33 @@ Dengan perbaikan tersebut, aplikasi dapat berjalan lebih stabil tanpa mengalami 
 
 ---
 
+## ▶️ Cara Menjalankan Aplikasi
+
+1. Clone repository
+
+```bash
+git clone https://github.com/salwaaprsn/Flavoria.git
+cd Flavoria
+```
+2. Install dependency
+
+```bash
+npm install
+```
+3. Jalankan project
+
+```bash
+npx expo start
+```
+
+---
+
+## 🔗 Link Terkait
+
+- **Video Demonstrasi:** [Tonton Demo]([https://drive.google.com/file/d/1dmI-FCwWPgXXlG8seZbAihVQ4UHuIDLz/view?usp=drivesdk])
+
+---
+
 ## 👩‍💻 Author
 
 **Nama**: Salwa Aprilia Santi
