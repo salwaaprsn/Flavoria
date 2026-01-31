@@ -89,10 +89,10 @@ Dengan perbaikan tersebut, aplikasi dapat berjalan lebih stabil tanpa mengalami 
 
 ## 👩‍💻 Author
 
-**Nama** : Salwa Aprilia Santi
+**Nama**: Salwa Aprilia Santi
 
-**NIM** : 20230040141
+**NIM**: 20230040141
 
-**Kelas** : TI23F
+**Kelas**: TI23F
 
-**Dosen** : Nugraha, M.Kom
+**Dosen**: Nugraha, M.Kom
