@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# 🍽️ Flavoria App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Aplikasi Resep Makanan Berbasis React Native (Expo)**
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Deskripsi Aplikasi
 
-   ```bash
-   npm install
-   ```
+Flavoria adalah aplikasi mobile berbasis **React Native (Expo)** yang digunakan untuk menampilkan dan mengelola informasi resep makanan dari berbagai negara. Data resep diperoleh melalui **API eksternal** dan disajikan dalam bentuk antarmuka yang interaktif dan mudah digunakan. Aplikasi ini dikembangkan sekaligus sebagai studi kasus **optimasi dan Debugging** pada aplikasi mobile React Native, dengan fokus pada stabilitas aplikasi, penanganan error saat runtime, serta pencegahan terjadinya crash pada perangkat Android.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Fitur Aplikasi
 
-In the output, you'll find options to open the app in a
+* 🌍 Menampilkan daftar resep makanan dari berbagai negara
+* 📄 Menampilkan detail resep makanan (bahan dan instruksi)
+* ⭐ Menandai resep sebagai favorit
+* 👤 Halaman profil pengguna
+* 🔄 Navigasi antar halaman yang smooth
+* 🛠️ Penanganan error dan optimasi render komponen
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 List Optimasi (Sudah Diterapkan)
 
-## Get a fresh project
+Untuk meningkatkan performa dan pengalaman pengguna, berikut beberapa teknik optimasi yang telah diterapkan dalam aplikasi:
 
-When you're ready, run:
+* **useMemo**: Digunakan untuk memproses filtrasi data resep dari API agar aplikasi tidak melakukan komputasi berat secara berulang pada setiap proses render.
 
-```bash
-npm run reset-project
-```
+* **useCallback**: Digunakan untuk me-memoize handler pencarian dan fungsi navigasi sehingga fungsi tidak dibuat ulang setiap kali komponen mengalami render ulang.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **React.memo**: Diterapkan pada komponen reusable seperti kartu resep atau tombol untuk mencegah re-render yang tidak diperlukan ketika nilai props tidak berubah.
 
-## Learn more
+* **Try-Catch Error Handling**: Digunakan pada setiap pemanggilan API untuk memastikan aplikasi tidak mengalami force close ketika terjadi kegagalan server atau masalah jaringan.
 
-To learn more about developing your project with Expo, look at the following resources:
+* **Optimasi Gambar**: Menerapkan penanganan error pada komponen `<Image>` agar aplikasi tetap stabil meskipun URL gambar dari API tidak valid atau rusak.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🔍 List Testing & Debugging
 
-Join our community of developers creating universal apps.
+Proses pengembangan aplikasi ini melibatkan beberapa metode testing dan debugging, antara lain:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* **Console.log**
+  Digunakan untuk melacak aliran data dari API dan memastikan state aplikasi tersimpan dengan benar.
+
+* **Metro Bundler**
+  Digunakan untuk memantau log error dan peringatan secara real-time selama proses pengembangan pada emulator maupun perangkat fisik.
+
+* **Expo DevTools**
+  Digunakan untuk memonitor performa aplikasi serta mengecek network request.
+
+* **Error Handling dengan Alert**
+  Menampilkan notifikasi yang user-friendly menggunakan komponen `Alert` ketika terjadi kegagalan koneksi atau data tidak ditemukan.
+
+---
+
+## 🐞 Permasalahan yang Ditemukan
+
+Pada tahap pengujian awal, aplikasi mengalami crash saat dijalankan di perangkat Android dengan pesan error berikut:
+
+> **“Text strings must be rendered within a `<Text>` component”**
+
+Error ini terjadi akibat penggunaan operator logika `&&` pada proses render, misalnya:
+
+`{data.length && <Component />}`
+
+Kondisi tersebut menyebabkan nilai numerik `0` dirender langsung di luar komponen `<Text>`, sehingga memicu crash pada aplikasi.
+
+---
+
+## 🔧 Solusi Perbaikan
+
+Langkah-langkah perbaikan yang dilakukan untuk mengatasi permasalahan tersebut adalah sebagai berikut:
+
+* Mengganti operator logika `&&` dengan **ternary operator**, misalnya:
+  `{data.length > 0 ? <Component /> : null}`
+* Memastikan setiap kondisi yang tidak terpenuhi menghasilkan nilai `null`
+* Melakukan validasi data dari API sebelum data ditampilkan pada antarmuka aplikasi
+
+Dengan perbaikan tersebut, aplikasi dapat berjalan lebih stabil tanpa mengalami error render.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+* ⚛️ React Native (Expo)
+* 🌐 **TheMealDB API** (Sumber data resep makanan)
+* 📱 Android Device Testing
+* 🧠 JavaScript / TypeScript
+
+---
+
+## 📚 Tujuan Pengembangan
+
+Aplikasi Flavoria dikembangkan untuk memenuhi tugas **Case Based / Project Based** pada mata kuliah:
+
+**Pemrograman Perangkat Mobile**
+Sesi Pertemuan: **XIV (14)**
+Topik: **Optimasi dan Debugging React Native**
+
+---
+
+## 👩‍💻 Author
+
+**Nama** : Salwa Aprilia Santi
+**NIM** : 20230040141
+**Kelas** : TI23F
+**Dosen** : Nugraha, M.Kom
