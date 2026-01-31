@@ -13,7 +13,7 @@ Flavoria adalah aplikasi mobile berbasis **React Native (Expo)** yang digunakan 
 ## ✨ Fitur Aplikasi
 
 * 🌍 Menampilkan daftar resep makanan dari berbagai negara
-* 📄 Menampilkan detail resep makanan (bahan dan instruksi)
+* 📄 Menampilkan detail resep makanan (bahan dan cara memasak)
 * ⭐ Menandai resep sebagai favorit
 * 👤 Halaman profil pengguna
 * 🔄 Navigasi antar halaman yang smooth
