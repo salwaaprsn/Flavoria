@@ -87,19 +87,12 @@ Dengan perbaikan tersebut, aplikasi dapat berjalan lebih stabil tanpa mengalami 
 
 ---
 
-## 📚 Tujuan Pengembangan
-
-Aplikasi Flavoria dikembangkan untuk memenuhi tugas **Case Based / Project Based** pada mata kuliah:
-
-**Pemrograman Perangkat Mobile**
-Sesi Pertemuan: **XIV (14)**
-Topik: **Optimasi dan Debugging React Native**
-
----
-
 ## 👩‍💻 Author
 
 **Nama** : Salwa Aprilia Santi
+
 **NIM** : 20230040141
+
 **Kelas** : TI23F
+
 **Dosen** : Nugraha, M.Kom
